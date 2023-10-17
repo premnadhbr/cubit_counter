@@ -23,11 +23,11 @@ class _CounterPageState extends State<CounterPage> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               FloatingActionButton(
-                onPressed: () {},
+                onPressed: () => context.read<CounterCubit>().increment(),
                 child: const Icon(Icons.add),
               ),
               FloatingActionButton(
-                onPressed: () {},
+                onPressed: () => context.read<CounterCubit>().decrement(),
                 child: const Icon(Icons.remove),
               ),
             ],
